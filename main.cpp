@@ -36,15 +36,15 @@ int main() {
 
     // Test the getEdgeWeight function
     int NewportToWaldportWeight = graph.getEdgeWeight("Newport", "Waldport");
-    cout << "Weight of edge from Newport to Waldport: " << NewportToWaldportWeight << " miles" << endl;
+    cout << "Weight of edge from Newport to Waldport: " << NewportToWaldportWeight << " miles" << endl; // expected: 16
 
     int EugeneToAlbanyWeight = graph.getEdgeWeight("Eugene", "Albany");
-    cout << "Weight of edge from Eugene to Albany: " << EugeneToAlbanyWeight << " miles" << endl;
+    cout << "Weight of edge from Eugene to Albany: " << EugeneToAlbanyWeight << " miles" << endl; // expected: 45
 
     // Test the shortestPath function
     string sourceCity = "Newport";
     string destinationCity = "Corvallis";
-    vector<string> shortestPath = graph.shortestPath(sourceCity, destinationCity);
+    vector<string> shortestPath = graph.shortestPath(sourceCity, destinationCity); // expected: newport -> philomath -> corvallis
 
     cout << "Shortest path from " << sourceCity << " to " << destinationCity << ": ";
     for (size_t i = 0; i < shortestPath.size(); ++i) {
@@ -62,7 +62,7 @@ int main() {
         const string& nextCity = shortestPath[i + 1];
         totalDistance += graph.getEdgeWeight(currentCity, nextCity);
     }
-    cout << "Total distance: " << totalDistance << " miles" << endl << endl;
+    cout << "Total distance: " << totalDistance << " miles" << endl << endl; // expected: 49
 
     // Test the minimumSpanningTree function
     vector<Edge> minimumSpanningTree = graph.minimumSpanningTree();
