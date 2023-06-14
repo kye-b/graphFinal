@@ -72,7 +72,7 @@ minimumSpanningTree function can be found in graph.cpp file from line 97 to 123.
 
 printGraph function can be found in graph.cpp file from line 125 to 137
 
-
+Within the mainsc file you can see the output of my main file which shows the functionality/results from the test.
 
 
 
